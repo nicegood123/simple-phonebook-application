@@ -1,162 +1,188 @@
-<b>GraphQL Playground Link</b>: BASE_URL/graphql-playground
-<b>HTTP HEADERS</b>
+# Simple Phonebook Application Guide
+
+## GraphQL Playground Link: BASE_URL/graphql-playground
+
+## HTTP Headers
+
+```
 {
 	"Accept": "application/json",
 	"Authorization": "Bearer 1|ijAbVzl23mqtVclvdGC2HZLZoKrTDWhQECKPgVqGe3fbf77d"
 }
 
+NOTE: Change Bearer token with your generate access token
+```
 
-<b>MODULE NAME: AUTH</b>
-<br>
-LOGIN:
-	Mutation:
-		 mutation {
-		 	login(
-		     email:"gisangeff@gmail.com", 
-		     password: "Gisangeff321!",
-		     device: "web"
-		   )
-		 }
-<br>
-REGISTER:
-	Mutation:
-	mutation {
-		register(
-	    name: "Gisan Geff Raniego"
-	    email:"gisangeff@gmail.com", 
-	    password: "Bambu123!",
-	    device: "web"
-	  )
-	}
+## Auth Module
+### *Login User*
 
+```
+ mutation {
+ 	login(
+     email:"gisangeff@gmail.com", 
+     password: "Bambu123!",
+     device: "web"
+   )
+ }
+```
 
-MODULE NAME: USER
+### *Register User*
 
-RETRIVE ALL USERS:
-	Query:
-		query {
-		  listUsers {
-		    id
-		    name
-		    email
-		    created_at
-		    updated_at
-		  }
-		}
-
- 
-RETRIEVE USER:
-	Query:
-		query {
-		  viewUser(id: 1) {
-		    id
-		    name
-		    email
-		    created_at
-		    updated_at
-		  }
-		}
-
-
-ADD USER:
-	Mutation:
-		mutation {
-		  createUser(
-		    name: "Gisan Geff Raniego",
-		    email: "gisangeff@gmail.com",
-		    password: "gisangeff123*"
-		  ) {
-		    id
-		    name
-		    email
-		    created_at
-		    updated_at
-		  }
-		}
+```
+mutation {
+	register(
+    name: "Gisan Geff Raniego"
+    email:"gisangeff@gmail.com", 
+    password: "Bambu123!",
+    device: "web"
+  )
+}
+```
 
 
 
-DELETE USER:
-	Mutation:
-		mutation {
-		  deleteUser(id: 1) {
-		    id
-		    name
-		    email
-		  }
-		}
+## User Module
+### *Get list of users*
 
-=========================================================================================
-MODULE NAME: CONTACT
-
-RETRIVE ALL CONTACTS:
-	Query:
-   		query {
-		  listContacts {
-		    id
-		    name
-		    contact_no
-		    created_at
-		    updated_at
-		  }
-		}
-
- 
-RETRIEVE CONTACT:
-	Query:
-		query {
-		  viewContact(id: 1) {
-		    id
-		    name
-		    contact_no
-		    created_at
-		    updated_at
-		  }
-		}
-
-ADD CONTACT:
-	Mutation:
-		mutation {
-		  createContact(
-				  name: "Janice",
-				  contact_no: "+639678123674"
-		  ) {
-		    id
-		    name
-		    contact_no
-		    created_at
-		    updated_at
-		  }
-		}
+```
+query {
+  listUsers {
+    id
+    name
+    email
+    created_at
+    updated_at
+  }
+}
+```
 
 
+### *View a user*
 
-UPDATE CONTACT:
-	Mutation:
-		mutation {
-		  updateContact(
-		     	id: 1,
-				  name: "Recca Rance",
-				  contact_no: "+639487776849"
-		  ) {
-		    id
-		    name
-		    contact_no
-		    created_at
-    		updated_at
-		  }
-		}	
+```
+query {
+  viewUser(id: 1) {
+    id
+    name
+    email
+    created_at
+    updated_at
+  }
+}
+```
+
+
+### *Create a user*
+
+```
+mutation {
+  createUser(
+    name: "Gisan Geff Raniego",
+    email: "gisangeff@gmail.com",
+    password: "gisangeff123*"
+  ) {
+    id
+    name
+    email
+    created_at
+    updated_at
+  }
+}
+```
+
+
+### *Delete a specific user*
+
+```
+mutation {
+  deleteUser(id: 1) {
+    id
+    name
+    email
+  }
+}
+```
 
 
 
-DELETE CONTACT:
-	Mutation:
-		mutation {
-		  deleteContact(id: 3) {
-		    id
-		    name
-		    contact_no
-        created_at
-        updated_at
-		  }
-		}
+## Contact Module
+### *Get list of contacts*
+
+```
+query {
+  listContacts {
+    id
+    name
+    contact_no
+    created_at
+    updated_at
+  }
+}
+```
+
+
+### *View a contact*
+
+```
+query {
+  viewContact(id: 1) {
+    id
+    name
+    contact_no
+    created_at
+    updated_at
+  }
+}
+```
+
+
+### *Create a contact*
+
+```
+mutation {
+  createContact(
+		  name: "Janice",
+		  contact_no: "+639678123674"
+  ) {
+    id
+    name
+    contact_no
+    created_at
+    updated_at
+  }
+}
+```
+
+
+### *Edit a specific contact*
+
+```
+mutation {
+  updateContact(
+     	id: 1,
+		  name: "Recca Rance",
+		  contact_no: "+639487776849"
+  ) {
+    id
+    name
+    contact_no
+    created_at
+	updated_at
+  }
+}	
+```
+
+
+### *Delete a specific contact*
+
+```
+mutation {
+  deleteContact(id: 3) {
+    id
+    name
+    contact_no
+created_at
+updated_at
+  }
+}
+```
