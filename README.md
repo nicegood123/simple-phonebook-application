@@ -6,8 +6,12 @@ HTTP HEADERS
 	"Authorization": "Bearer 1|ijAbVzl23mqtVclvdGC2HZLZoKrTDWhQECKPgVqGe3fbf77d"
 }
 
+<br>
 =========================================================================================
+<br>
+
 MODULE NAME: AUTH
+<br>
 
 LOGIN:
 	Mutation:
@@ -18,6 +22,7 @@ LOGIN:
 		     device: "web"
 		   )
 		 }
+<br>
 
 
 REGISTER:
