@@ -10,7 +10,7 @@
 	"Authorization": "Bearer 1|ijAbVzl23mqtVclvdGC2HZLZoKrTDWhQECKPgVqGe3fbf77d"
 }
 
-NOTE: Change Bearer token with your generate access token
+NOTE: Change Bearer token with your generated access token
 ```
 
 ## Auth Module
