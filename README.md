@@ -2,7 +2,6 @@
 
 <br>
 <br>
-<br>
 
 <b>HTTP HEADERS</b>
 {
@@ -10,7 +9,6 @@
 	"Authorization": "Bearer 1|ijAbVzl23mqtVclvdGC2HZLZoKrTDWhQECKPgVqGe3fbf77d"
 }
 
-<br>
 <br>
 <br>
 
