@@ -1,7 +1,6 @@
 <b>GraphQL Playground Link</b>: BASE_URL/graphql-playground
 
 <br>
-<br>
 
 <b>HTTP HEADERS</b>
 {
@@ -25,8 +24,6 @@ LOGIN:
 		     device: "web"
 		   )
 		 }
-
-<br>
 
 REGISTER:
 	Mutation:
