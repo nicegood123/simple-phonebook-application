@@ -1,0 +1,27 @@
+# Contact Module
+type Contact {
+    id: ID!
+    name: String!
+    contact_no: String!
+    created_at: DateTime!
+    updated_at: DateTime!
+}
+
+extend type Query {
+   # Get a list of contacts
+  listContacts: [Contact!]! @all
+
+  # View a contact
+  viewContact(id: ID @whereKey): Contact @find
+}
+
+extend type Mutation {
+  # Create contact
+  createContact(name: String!, contact_no: String!): Contact @create
+
+  # Edit a specific contact
+  updateContact(id: ID!, name: String!, contact_no: String!): Contact @update
+
+  # Delete a specific contact
+  deleteContact(id: ID!, @whereKey): Contact @delete
+}

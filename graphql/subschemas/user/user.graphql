@@ -1,18 +1,26 @@
-"A datetime string with format `Y-m-d H:i:s`, e.g. `2018-05-23 13:43:32`."
-scalar DateTime @scalar(class: "Nuwave\\Lighthouse\\Schema\\Types\\Scalars\\DateTime")
-
 type User {
     id: ID!
     name: String!
     email: String!
     created_at: DateTime!
     updated_at: DateTime!
-    # tasks: [Task!]! @hasMany
 }
 
-input UserInput {
-    name: String!
-    email: String!
-    password: String!
+extend type Query {
+  # Get a list of users
+  listUsers: [User!]! @all
+
+  # View a user
+  viewUser(id: ID @whereKey): User @find
+
+
 }
 
+extend type Mutation {
+  # Create User
+  createUser(name: String!, email: String!, password: String!): User @create
+
+  # Delete User
+  deleteUser(id: ID! @whereKey): User @delete
+
+}
