@@ -27,8 +27,6 @@ LOGIN:
 		 }
 
 <br>
-<br>
-
 
 REGISTER:
 	Mutation:
