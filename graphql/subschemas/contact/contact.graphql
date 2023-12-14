@@ -9,19 +9,19 @@ type Contact {
 
 extend type Query {
    # Get a list of contacts
-  listContacts: [Contact!]! @all
+  listContacts: [Contact!]! @all @guard
 
   # View a contact
-  viewContact(id: ID @whereKey): Contact @find
+  viewContact(id: ID @whereKey): Contact @find @guard
 }
 
 extend type Mutation {
   # Create contact
-  createContact(name: String!, contact_no: String!): Contact @create
+  createContact(name: String!, contact_no: String!): Contact @create @guard
 
   # Edit a specific contact
-  updateContact(id: ID!, name: String!, contact_no: String!): Contact @update
+  updateContact(id: ID!, name: String!, contact_no: String!): Contact @update @guard
 
   # Delete a specific contact
-  deleteContact(id: ID!, @whereKey): Contact @delete
+  deleteContact(id: ID!, @whereKey): Contact @delete @guard
 }

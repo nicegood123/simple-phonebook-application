@@ -16,7 +16,3 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
-
-
-// Route::view('/graphql-playground', 'graphql-playground')->name('graphql-playground');
-// Route::post('/graphql', 'GraphQLController@graphql')->middleware(['auth:api']);

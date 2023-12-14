@@ -8,19 +8,19 @@ type User {
 
 extend type Query {
   # Get a list of users
-  listUsers: [User!]! @all
+  listUsers: [User!]! @all @guard
 
   # View a user
-  viewUser(id: ID @whereKey): User @find
+  viewUser(id: ID @whereKey): User @find @guard
 
 
 }
 
 extend type Mutation {
   # Create User
-  createUser(name: String!, email: String!, password: String!): User @create
-
+  createUser(name: String!, email: String!, password: String!): User @create @guard
+ 
   # Delete User
-  deleteUser(id: ID! @whereKey): User @delete
+  deleteUser(id: ID! @whereKey): User @delete @guard
 
 }
