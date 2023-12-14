@@ -1,16 +1,21 @@
-GraphQL Playground Link: BASE_URL/graphql-playground
+<b>GraphQL Playground Link</b>: BASE_URL/graphql-playground
 
-HTTP HEADERS
+<br>
+<br>
+<br>
+
+<b>HTTP HEADERS</b>
 {
 	"Accept": "application/json",
 	"Authorization": "Bearer 1|ijAbVzl23mqtVclvdGC2HZLZoKrTDWhQECKPgVqGe3fbf77d"
 }
 
 <br>
-=========================================================================================
+<br>
 <br>
 
-MODULE NAME: AUTH
+<b>MODULE NAME: AUTH</b>
+
 <br>
 
 LOGIN:
@@ -22,6 +27,8 @@ LOGIN:
 		     device: "web"
 		   )
 		 }
+
+<br>
 <br>
 
 
@@ -36,14 +43,11 @@ REGISTER:
 	  )
 	}
 
+<br>
+<be>
+<br>
 
-	HTTP HEADERS
-	{
-		"Accept": "application/json",
-		"Authorization": "Bearer 1|ijAbVzl23mqtVclvdGC2HZLZoKrTDWhQECKPgVqGe3fbf77d"
-	}
 
-=========================================================================================
 MODULE NAME: USER
 
 RETRIVE ALL USERS:
