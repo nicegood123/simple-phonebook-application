@@ -140,10 +140,7 @@ query {
 
 ```
 mutation {
-  createContact(
-		  name: "Janice",
-		  contact_no: "+639678123674"
-  ) {
+  createContact(name: "Janice", contact_no: "+639678123674") {
     id
     name
     contact_no
@@ -158,18 +155,14 @@ mutation {
 
 ```
 mutation {
-  updateContact(
-     	id: 1,
-		  name: "Recca Rance",
-		  contact_no: "+639487776849"
-  ) {
+  updateContact(id: 1, name: "Recca Rance", contact_no: "+639487776849") {
     id
     name
     contact_no
     created_at
-	updated_at
+    updated_at
   }
-}	
+}
 ```
 
 
@@ -181,8 +174,8 @@ mutation {
     id
     name
     contact_no
-created_at
-updated_at
+    created_at
+    updated_at
   }
 }
 ```
