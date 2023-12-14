@@ -1,20 +1,13 @@
 <b>GraphQL Playground Link</b>: BASE_URL/graphql-playground
-
-<br>
-
 <b>HTTP HEADERS</b>
 {
 	"Accept": "application/json",
 	"Authorization": "Bearer 1|ijAbVzl23mqtVclvdGC2HZLZoKrTDWhQECKPgVqGe3fbf77d"
 }
 
-<br>
-<br>
 
 <b>MODULE NAME: AUTH</b>
-
 <br>
-
 LOGIN:
 	Mutation:
 		 mutation {
@@ -24,7 +17,7 @@ LOGIN:
 		     device: "web"
 		   )
 		 }
-
+<br>
 REGISTER:
 	Mutation:
 	mutation {
@@ -35,10 +28,6 @@ REGISTER:
 	    device: "web"
 	  )
 	}
-
-<br>
-<be>
-<br>
 
 
 MODULE NAME: USER
