@@ -10,30 +10,26 @@
 	"Authorization": "Bearer 1|ijAbVzl23mqtVclvdGC2HZLZoKrTDWhQECKPgVqGe3fbf77d"
 }
 
-// NOTE: Change Bearer token with your generated access token
+NOTE: Change Bearer token with your generate access token
 ```
 
 ## Auth Module
 ### *Login User*
 
 ```
- mutation {
- 	login(
-     email:"gisangeff@gmail.com", 
-     password: "Bambu123!",
-     device: "web"
-   )
- }
+mutation {
+  login(email: "gisangeff@gmail.com", password: "Bambu123!", device: "web")
+}
 ```
 
 ### *Register User*
 
 ```
 mutation {
-	register(
+  register(
     name: "Gisan Geff Raniego"
-    email:"gisangeff@gmail.com", 
-    password: "Bambu123!",
+    email: "gisangeff@gmail.com"
+    password: "Bambu123!"
     device: "web"
   )
 }
